@@ -16,7 +16,11 @@
 </head>
 
 <body>
-  <p id="notice"></p>
+  <% if flash[:notice] %>
+  <div class="book book-primary" role="book">
+    <%= notice %>
+  </div>
+<% end %>
   <p>
     <strong>Title:</strong>
     <%= @book.title %>
